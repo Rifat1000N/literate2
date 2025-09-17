@@ -61,7 +61,7 @@ function addToCart() {
         name: 'ELARA Dress',
         price: 850,
         quantity: 1,
-        image: 'pro1/ppf.webp'
+        image: 'pro2/pp6.webp'
     };
 
     const existingItem = cart.find(item => item.id === newItem.id);
