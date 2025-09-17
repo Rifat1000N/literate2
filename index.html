@@ -641,6 +641,52 @@
             <h2 class="section-title">FEATURED PRODUCTS</h2>
             <div class="product-grid">
 
+                <!-- products 3x live -->
+
+<a href="pro3.html" class="product-link">
+    <div class="product-card">
+        <div class="product-image">
+            <div class="product-badge">New</div>
+            <img src="pro3/pp1.webp" alt="Premium Cotton T-Shirt">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Premium Cotton T-Shirt</h3>
+            <div class="product-price">
+                ৳1,500 <span class="original">৳2,000</span>
+            </div>
+            <div class="quick-add" style="cursor: pointer; display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px;">
+                Quick Add
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.product-link:hover .product-card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card {
+    transition: all 0.2s ease;
+}
+</style>
+
+<script>
+document.querySelectorAll('.quick-add').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        alert('Added to cart!');
+    });
+});
+</script>
+
+
                 <!-- products 2x test -->
 
 <a href="pro2.html" class="product-link">
