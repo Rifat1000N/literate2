@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page - ELARA</title>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="nav-container">
-            <button class="menu-btn">☰</button>
+             <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <div class="logo">
                 <img src="logo.svg" alt="Logo" class="logo-svg">
                 
@@ -27,6 +34,27 @@
             </div>
         </div>
     </header>
+
+     <!-- Menu Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">Menu</div>
+            <button class="close-btn" id="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                <li><a href="#terms"><i class="fas fa-file-text"></i> Terms & Conditions</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Shopping Cart Overlay -->
     <div class="cart-overlay" id="cartOverlay" onclick="closeCartOnOverlay(event)">
