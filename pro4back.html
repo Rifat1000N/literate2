@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - ELARA</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+              <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="logo">
+                <img src="logo.svg" alt="Logo" class="logo-svg">
+
+                <span>SIGNATURE STYLES BD</span>
+                        </div>
+            <div class="cart-container">
+                <button class="cart-btn" onclick="openCart()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 19C6 20.1046 6.89543 21 8 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H6V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 5L5 2H2L3 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9" cy="19" r="2" fill="currentColor"/>
+  <circle cx="17" cy="19" r="2" fill="currentColor"/>
+</svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+       <!-- Menu Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">Menu</div>
+            <button class="close-btn" id="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                <li><a href="#terms"><i class="fas fa-file-text"></i> Terms & Conditions</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Shopping Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartOnOverlay(event)">
+        <div class="cart-panel" onclick="event.stopPropagation()">
+            <div class="cart-header">
+                <div style="display: flex; align-items: center;">
+                    <span class="cart-title">Shopping Cart</span>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </div>
+                <button class="cart-close" onclick="closeCart()">×</button>
+            </div>
+
+            <div class="cart-body" id="cartBody">
+                <!-- Empty Cart State -->
+                <div class="empty-cart" id="emptyCart">
+                    <div class="empty-cart-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 19C6 20.1046 6.89543 21 8 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H6V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 5L5 2H2L3 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9" cy="19" r="2" fill="currentColor"/>
+  <circle cx="17" cy="19" r="2" fill="currentColor"/>
+</svg></div>
+                    <div class="empty-cart-text">No products in the cart.</div>
+                    <button class="continue-shopping-btn" onclick="closeCart()">Continue Shopping</button>
+                </div>
+
+                <!-- Cart Items (shown when cart has products) -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+            </div>
+
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">৳0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <button class="nav-btn"onclick="previousImage()">← Previous</button>
+        <button class="nav-btn" onclick="nextImage()">Next →</button> 
+    </nav>
+
+    <div class="container">
+        <div class="product-section">
+            <div class="image-gallery">
+                <div class="sale-badge">Sale!</div>
+                <img id="mainImage" class="main-image" src="pro3/pp1.webp" alt="ELARA Dress">
+
+                <button class="nav-arrow prev-arrow" onclick="previousImage()">‹</button>
+                <button class="nav-arrow next-arrow" onclick="nextImage()">›</button>
+            </div>
+
+            <div class="thumbnail-container" id="thumbnailContainer">
+
+                <img class="thumbnail active" src="pro3/pp1.webp" onclick="selectImage(0)" alt="View 1">
+                <img class="thumbnail" src="pro3/pp2.webp" onclick="selectImage(1)" alt="View 2">
+                <img class="thumbnail" src="pro3/pp3.webp" onclick="selectImage(2)" alt="View 3">
+                <img class="thumbnail" src="pro3/pp4.webp" onclick="selectImage(3)" alt="View 4">
+
+
+
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">ELARA</h1>
+
+                <div class="price-container">
+                    <span class="original-price">৳1,100.00</span>
+                    <span class="sale-price">৳850.00</span>
+                </div>
+
+                <div class="product-options">
+                    <div class="option-group">
+                        <label class="option-label">Size:</label>
+                        <div class="size-options">
+                            <button class="size-btn active">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label class="option-label">Color:</label>
+                        <div class="color-options">
+                            <button class="color-btn active">Black</button>
+                            <button class="color-btn">Navy</button>
+                            <button class="color-btn">Grey</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quantity-container">
+                    <label class="quantity-label">Quantity:</label>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="number" class="qty-input" value="1" min="1" max="10" id="quantityInput">
+                        <button class="qty-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="addToCart()">Add to Cart</button>
+                    <button class="btn-secondary" onclick="buyNow()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-overlay" id="fullscreenOverlay" onclick="closeFullscreen()">
+        <button class="close-btn" onclick="closeFullscreen()">×</button>
+        <img id="fullscreenImage" class="fullscreen-image" src="" alt="Product Image">
+    </div>
+
+    <script>
+        // Image gallery functionality
+        const images = [
+            'pro3/pp1.webp',
+            'pro3/pp2.webp',
+            'pro3/pp3.webp',
+            'pro3/pp4.webp'
+
+        ];
+
+        let currentImageIndex = 0;
+
+        function selectImage(index) {
+            currentImageIndex = index;
+            document.getElementById('mainImage').src = images[index];
+
+            // Update active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            selectImage(currentImageIndex);
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            selectImage(currentImageIndex);
+        }
+
+        // Quantity controls
+        function increaseQuantity() {
+            const input = document.getElementById('quantityInput');
+            const currentValue = parseInt(input.value);
+            if (currentValue < 10) {
+                input.value = currentValue + 1;
+            }
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantityInput');
+            const currentValue = parseInt(input.value);
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
+            }
+        }
+
+        // Option selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.color-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Fullscreen image view
+        document.getElementById('mainImage').addEventListener('click', function() {
+            document.getElementById('fullscreenImage').src = this.src;
+            document.getElementById('fullscreenOverlay').style.display = 'flex';
+        });
+
+        function closeFullscreen() {
+            document.getElementById('fullscreenOverlay').style.display = 'none';
+        }
+
+        // Cart functionality
+        function addToCart() {
+            const size = document.querySelector('.size-btn.active').textContent;
+            const color = document.querySelector('.color-btn.active').textContent;
+            const quantity = document.getElementById('quantityInput').value;
+
+            // Update cart count
+            const cartCount = document.querySelector('.cart-count');
+            const currentCount = parseInt(cartCount.textContent);
+            cartCount.textContent = currentCount + parseInt(quantity);
+
+            // Show confirmation
+            alert(`Added to cart:\nElara Dress\nSize: ${size}\nColor: ${color}\nQuantity: ${quantity}`);
+        }
+
+        function buyNow() {
+            const size = document.querySelector('.size-btn.active').textContent;
+            const color = document.querySelector('.color-btn.active').textContent;
+            const quantity = document.getElementById('quantityInput').value;
+
+            alert(`Proceeding to checkout:\nELARA Dress\nSize: ${size}\nColor: ${color}\nQuantity: ${quantity}\nTotal: ৳${850 * quantity}`);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                previousImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'Escape') {
+                closeFullscreen();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        document.getElementById('mainImage').addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        });
+
+        document.getElementById('mainImage').addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeDistance = startX - endX;
+            const minSwipeDistance = 50;
+
+            if (Math.abs(swipeDistance) >= minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    nextImage(); // Swipe left, show next image
+                } else {
+                    previousImage(); // Swipe right, show previous image
+                }
+            }
+        }
+    </script>
+    <script src="pro4back.js"></script>
+</body>
+</html>
