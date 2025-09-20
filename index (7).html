@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignatureStylesBD - Modern Classy Clothing</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+            overflow-x: hidden; /* ADD THIS LINE */
+        }
+
+        /* Header */
+        .top-bar {
+            background: #000;
+            color: white;
+            padding: 8px 0;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .header {
+            background: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #666;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icons a {
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #000;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f5f5f5" width="1200" height="600"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="48" fill="%23333">HERO IMAGE</text></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+
+         .hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('background.webp');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    /* ...other styles... */
+}
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #333;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 50px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #333;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-item {
+            background: white;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            padding-bottom: 125%;
+
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #ccc;
+            position: relative;
+            oberflow: hidden; 
+            object-position: center top;
+        }
+
+        .category-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .category-title {
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Products */
+        .products {
+            padding: 60px 0;
+            max-width: 100%; /* Add this */
+            overflow-x: hidden; /* Add this */
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px; /* use to be 30 */
+            padding: 0 15px; /* Addthis15px */
+            max-width: 100%; /* Add this */
+        }
+
+        .product-card {
+            background: white;
+            overflow: hidden;
+            transition: all 0.3s;
+
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5; 
+            padding-bottom: 125%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #ccc;
+            position: relative;
+            overflow: hidden;
+            object-position: center top;
+        }
+
+
+        .product-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+         }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #000;
+            color: white;
+            padding: 5px 10px;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .product-price .original {
+            text-decoration: line-through;
+            color: #999;
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        .quick-add {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .quick-add:hover {
+            background: #333;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #000;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            background: white;
+            color: #333;
+        }
+
+        .newsletter-form button {
+            padding: 12px 20px;
+            background: white;
+            color: #000;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f9f9f9;
+            padding: 50px 0 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #333;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Mobile Responsive */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .logo {
+        order: 2;
+        flex: 1;
+        text-align: center;
+        font-size: 25px;
+        margin-left: 10px;
+        padding-left: 0px;
+        gap: 10px;
+            
+        
+    }
+
+    .header-icons {
+        order: 3;
+        gap: 15px;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+        gap: 5px;
+    }
+    
+    .header {
+        padding: 20px 0;
+    }
+    
+    
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .nav-menu a {
+                font-size: 12px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 0 10px; /* Add this */
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 0 10px; /* Add this */
+            }
+
+            /* Add these new rules */
+            .products {
+                padding: 40px 0; /* Reduce padding */
+            }
+
+            .product-card {
+        min-width: 0;
+            }
+
+    body {
+        overflow-x: hidden;
+            }
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+            }
+       }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+
+        .loading.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #333;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            Free Shipping on Orders Over ৳2000 | Call: +880 1XXX-XXXXXX
+        </div>
+    </div>
+
+    <!-- Header -->
+ <!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <a href="#" class="logo">
+                <img src="logo.svg" alt="Signature Styles BD Logo" style="height:50px; vertical-align:middle;">
+                <span style="font-size: 18px; font-weight: bold; color: #000;">SIGNATURE STYLES BD</span>
+            </a>
+            
+            <div class="cart-container">
+                <button class="cart-btn" onclick="openCart()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 19C6 20.1046 6.89543 21 8 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H6V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 5L5 2H2L3 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="9" cy="19" r="2" fill="currentColor"/>
+                        <circle cx="17" cy="19" r="2" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+ <!-- Menu Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">Menu</div>
+            <button class="close-btn" id="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                <li><a href="#terms"><i class="fas fa-file-text"></i> Terms & Conditions</a></li>
+            </ul>
+        </nav>
+    </div>
+
+  <!-- Shopping Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartOnOverlay(event)">
+        <div class="cart-panel" onclick="event.stopPropagation()">
+            <div class="cart-header">
+                <div style="display: flex; align-items: center;">
+                    <span class="cart-title">Shopping Cart</span>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </div>
+                <button class="cart-close" onclick="closeCart()">×</button>
+            </div>
+
+            <div class="cart-body" id="cartBody">
+                <!-- Empty Cart State -->
+                <div class="empty-cart" id="emptyCart">
+                    <div class="empty-cart-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 19C6 20.1046 6.89543 21 8 21H19C20.1046 21 21 20.1046 21 19V7C21 5.89543 20.1046 5 19 5H6V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 5L5 2H2L3 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="9" cy="19" r="2" fill="currentColor"/>
+  <circle cx="17" cy="19" r="2" fill="currentColor"/>
+</svg></div>
+                    <div class="empty-cart-text">No products in the cart.</div>
+                    <button class="continue-shopping-btn" onclick="closeCart()">Continue Shopping</button>
+                </div>
+
+                <!-- Cart Items (shown when cart has products) -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+            </div>
+
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">৳0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>NEW COLLECTION</h1>
+            <p>Discover modern classy clothing in Bangladesh</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Future Products</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-image">
+
+                       <img src="newcol1.webp" alt="Men's Collection">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="category-title">Coming Soon</div>
+                </div>
+
+                <div class="category-item">
+                    <div class="category-image">
+
+                       <img src="newcol2.webp" alt="Men's Collection">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="category-title">Coming Soon</div>
+                </div>
+
+                <div class="category-item">
+                    <div class="category-image">
+
+                       <img src="newcol3.webp" alt="Men's Collection">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="category-title">Coming Soon</div>
+                </div>
+
+                <div class="category-item">
+                    <div class="category-image">
+                       <img src="newcol4.webp" alt="Men's Collection">
+
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="category-title">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">FEATURED PRODUCTS</h2>
+            <div class="product-grid">
+
+                <!-- products 4x live -->
+
+<a href="pro4.html" class="product-link">
+    <div class="product-card">
+        <div class="product-image">
+            <div class="product-badge">New</div>
+            <img src="pro4/pp1.webp" alt="Premium Cotton T-Shirt">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Premium Cotton T-Shirt</h3>
+            <div class="product-price">
+                ৳1,500 <span class="original">৳2,000</span>
+            </div>
+            <div class="quick-add" style="cursor: pointer; display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px;">
+                Quick Add
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.product-link:hover .product-card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card {
+    transition: all 0.2s ease;
+}
+</style>
+
+<script>
+document.querySelectorAll('.quick-add').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        alert('Added to cart!');
+    });
+});
+</script>
+
+
+
+                <!-- products 3x live -->
+
+<a href="pro3.html" class="product-link">
+    <div class="product-card">
+        <div class="product-image">
+            <div class="product-badge">New</div>
+            <img src="pro3/pp1.webp" alt="Premium Cotton T-Shirt">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Premium Cotton T-Shirt</h3>
+            <div class="product-price">
+                ৳1,500 <span class="original">৳2,000</span>
+            </div>
+            <div class="quick-add" style="cursor: pointer; display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px;">
+                Quick Add
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.product-link:hover .product-card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card {
+    transition: all 0.2s ease;
+}
+</style>
+
+<script>
+document.querySelectorAll('.quick-add').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        alert('Added to cart!');
+    });
+});
+</script>
+
+
+                <!-- products 2x test -->
+
+<a href="pro2.html" class="product-link">
+    <div class="product-card">
+        <div class="product-image">
+            <div class="product-badge">New</div>
+            <img src="pro2/pp6.webp" alt="Premium Cotton T-Shirt">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Premium Cotton T-Shirt</h3>
+            <div class="product-price">
+                ৳1,500 <span class="original">৳2,000</span>
+            </div>
+            <div class="quick-add" style="cursor: pointer; display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px;">
+                Quick Add
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.product-link:hover .product-card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card {
+    transition: all 0.2s ease;
+}
+</style>
+
+<script>
+document.querySelectorAll('.quick-add').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        alert('Added to cart!');
+    });
+});
+</script>
+
+
+                <!-- products 1x test -->
+
+<a href="pro1.html" class="product-link">
+    <div class="product-card">
+        <div class="product-image">
+            <div class="product-badge">New</div>
+            <img src="pro1/ppf.webp" alt="Premium Cotton T-Shirt">
+            <i class="fas fa-tshirt"></i>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Premium Cotton T-Shirt</h3>
+            <div class="product-price">
+                ৳1,500 <span class="original">৳2,000</span>
+            </div>
+            <div class="quick-add" style="cursor: pointer; display: inline-block; padding: 8px 16px; background: #007bff; color: white; border-radius: 4px;">
+                Quick Add
+            </div>
+        </div>
+    </div>
+</a>
+
+<style>
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.product-link:hover .product-card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card {
+    transition: all 0.2s ease;
+}
+</style>
+
+<script>
+document.querySelectorAll('.quick-add').forEach(el => {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        alert('Added to cart!');
+    });
+});
+</script>
+
+
+
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-badge">New</div>
+
+                       <img src="product1.webp" alt="Premium Cotton T-Shirt">
+
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Cotton T-Shirt</h3>
+                        <div class="product-price">
+                            ৳1,500 <span class="original">৳2,000</span>
+                        </div>
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-badge">Sale</div>
+
+                       <img src="product2.webp" alt="Premium Cotton T-Shirt">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Formal Shirt</h3>
+                        <div class="product-price">
+                            ৳2,500 <span class="original">৳3,500</span>
+                        </div>
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+
+                       <img src="product3.webp" alt="Premium Cotton T-Shirt">
+
+                        <i class="fas fa-vest"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Casual Hoodie</h3>
+                        <div class="product-price">
+                            ৳3,200
+                        </div>
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-badge">Hot</div>
+
+                       <img src="product4.webp" alt="Premium Cotton T-Shirt">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Designer Kurti</h3>
+                        <div class="product-price">
+                            ৳2,800 <span class="original">৳3,800</span>
+                        </div>
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+
+                       <img src="add new" alt="Premium Cotton T-Shirt">
+
+                       <img src="newcol1.webp" alt="Men's Collection">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Leather Shoes</h3>
+                        <div class="product-price">
+                            ৳4,500
+                        </div>
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-badge">Limited</div>
+
+                       <img src="newcol2.webp" alt="Men's Collection">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Watch</h3>
+                        <div class="product-price">
+                            ৳8,500 <span class="original">৳12,000</span>
+                        </div>
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>STAY IN TOUCH</h2>
+            <p>Get updates on new arrivals and exclusive offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">
+                        Payment: bKash | Nagad | Rocket<br>
+                        Cash on Delivery Available
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Signature Styles BD. All rights reserved. Made with ❤️ in Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('hide');
+            }, 1000);
+        });
+
+        // Cart functionality
+        let cartCount = 0;
+        const cartCountElement = document.getElementById('cart-count');
+
+        // Add to cart functionality
+        document.querySelectorAll('.quick-add').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Get product info
+                const productCard = this.closest('.product-card');
+                const title = productCard.querySelector('.product-title').textContent;
+                const price = productCard.querySelector('.product-price').textContent;
+
+                // Update cart count
+                cartCount++;
+                cartCountElement.textContent = cartCount;
+
+                // Visual feedback
+                this.style.background = '#28a745';
+                this.textContent = 'Added!';
+
+                setTimeout(() => {
+                    this.style.background = '#000';
+                    this.textContent = 'Quick Add';
+                }, 1500);
+
+                // Simple notification
+                showNotification(`${title} added to cart!`);
+            });
+        });
+
+        // Simple notification system
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #000;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                z-index: 10000;
+                font-size: 14px;
+                animation: slideIn 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Add slide-in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            showNotification('Thank you for subscribing!');
+            this.querySelector('input').value = '';
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Category click handlers
+        document.querySelectorAll('.category-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const categoryName = this.querySelector('.category-title').textContent;
+                showNotification(`Browsing ${categoryName}`);
+            });
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
