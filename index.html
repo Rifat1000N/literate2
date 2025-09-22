@@ -1214,6 +1214,16 @@ document.querySelectorAll('.quick-add').forEach(el => {
             });
         });
 
+       // Shrinking Header on Scroll
+const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
         // Category click handlers
         document.querySelectorAll('.category-item').forEach(item => {
             item.addEventListener('click', function() {
